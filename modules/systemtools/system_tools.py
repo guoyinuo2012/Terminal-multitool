@@ -254,7 +254,7 @@ class SystemTools:
             
         except Exception as e:
             self.error_handler.handle_exception(e, "Process list")
-            self.console.print(f"[red]Error: {e}[-red]")
+            self.console.print(f"[red]Error: {e}[/red]")
             return None
     
     def display_processes(self, processes: List[Dict[str, Any]]) -> None:
