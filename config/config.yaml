@@ -12,6 +12,8 @@ ui:
   theme: dark
   refresh_rate: 1.0
   max_history: 100
+  show_disclaimer: true
+  custom_menu: false
 
 network:
   timeout: 30
@@ -33,3 +35,8 @@ generators:
 crypto:
   default_hash_algorithm: sha256
   default_token_length: 32
+
+customization:
+  enable_themes: true
+  enable_menu_customization: true
+  save_preferences: true

@@ -13,6 +13,8 @@ import sys
 
 from modules.utils.logger import setup_logger
 from modules.utils.error_handler import ErrorHandler
+from modules.customization.theme_manager import ThemeManager
+from modules.customization.menu_customizer import MenuCustomizer
 
 
 class Dashboard:
@@ -26,18 +28,20 @@ class Dashboard:
         self.error_handler = ErrorHandler()
         self.running = True
         
-        # Simplified tool categories
-        self.categories = {
-            '1': {'name': 'OSINT', 'desc': 'Open-source intelligence', 'module': 'modules.osint'},
-            '2': {'name': 'Network', 'desc': 'Network analysis & tools', 'module': 'modules.network'},
-            '3': {'name': 'Security', 'desc': 'Security testing & analysis', 'module': 'modules.security'},
-            '4': {'name': 'Crypto', 'desc': 'Encryption & hashing tools', 'module': 'modules.crypto'},
-            '5': {'name': 'Gen', 'desc': 'Data generators', 'module': 'modules.generators'},
-            '6': {'name': 'Utils', 'desc': 'General utilities', 'module': 'modules.utilities'},
-            '7': {'name': 'Discord', 'desc': 'Discord tools', 'module': 'modules.discord'},
-            '8': {'name': 'Resources', 'desc': 'OSINT resources', 'module': 'modules.resources'},
-            '0': {'name': 'Exit', 'desc': 'Exit application', 'module': None}
-        }
+        # Initialize customization managers
+        self.theme_manager = ThemeManager()
+        self.menu_customizer = MenuCustomizer()
+        
+        # Load custom menu or use default
+        self.categories = self.menu_customizer.get_custom_menu()
+        
+        # Add customization option if not present
+        if '9' not in self.categories:
+            self.categories['9'] = {
+                'name': 'Customize',
+                'desc': 'Themes, menu, settings',
+                'module': 'modules.customization'
+            }
     
     def run(self) -> None:
         """Run the main dashboard loop."""
@@ -59,22 +63,28 @@ class Dashboard:
         """Display the main menu dashboard."""
         self.console.clear()
         
-        # Simple header
-        self.console.print("[bold cyan]VOID - Terminal-Based Multitool[/bold cyan]")
-        self.console.print("[bold green]Created by Yinuo[/bold green]\n")
+        # Apply theme colors
+        header_color = self.theme_manager.get_theme_color('header')
+        subtitle_color = self.theme_manager.get_theme_color('subtitle')
         
-        # Simple table
+        # Simple header with theme
+        self.console.print(f"[bold {header_color}]VOID - Terminal-Based Multitool[/bold {header_color}]")
+        self.console.print(f"[bold {subtitle_color}]Created by Yinuo[/bold {subtitle_color}]\n")
+        
+        # Simple table with theme colors
         table = Table(show_header=False)
-        table.add_column("Opt", style="cyan", width=4)
-        table.add_column("Tool", style="green", width=15)
-        table.add_column("Description", style="white")
+        table.add_column("Opt", style=self.theme_manager.get_theme_color('table_col_1'), width=4)
+        table.add_column("Tool", style=self.theme_manager.get_theme_color('table_col_2'), width=15)
+        table.add_column("Description", style=self.theme_manager.get_theme_color('table_col_3'))
         
+        # Display only non-hidden categories
         for key, cat in self.categories.items():
-            table.add_row(key, cat['name'], cat['desc'])
+            if not cat.get('hidden', False):
+                table.add_row(key, cat['name'], cat['desc'])
         
         self.console.print(table)
-        self.console.print("\n[yellow]DISCLAIMER: Education & authorized research only[/yellow]")
-        self.console.print("[bold cyan]Choice:[/bold cyan] ", end="")
+        self.console.print(f"\n[{self.theme_manager.get_theme_color('highlight')}DISCLAIMER: Education & authorized research only[/{self.theme_manager.get_theme_color('highlight')}]")
+        self.console.print(f"[bold {self.theme_manager.get_theme_color('header')}Choice:[/bold {self.theme_manager.get_theme_color('header')}] ", end="")
     
     def get_user_choice(self) -> str:
         """
