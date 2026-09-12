@@ -14,6 +14,7 @@ from modules.utils.config import ConfigManager
 from .theme_manager import ThemeManager
 from .config_editor import ConfigEditor
 from .menu_customizer import MenuCustomizer
+from .keybindings import KeybindingsManager
 
 
 class CustomizationTools:
@@ -31,6 +32,7 @@ class CustomizationTools:
         self.theme_manager = ThemeManager()
         self.config_editor = ConfigEditor()
         self.menu_customizer = MenuCustomizer()
+        self.keybindings_manager = KeybindingsManager()
     
     @handle_errors("List themes", show_user=True)
     def list_themes(self) -> None:
@@ -141,6 +143,31 @@ class CustomizationTools:
             self.console.print("[red]Failed to reset menu[/red]")
             return False
     
+    @handle_errors("Show keybindings", show_user=True)
+    def show_keybindings(self) -> None:
+        """Display current keybindings."""
+        self.keybindings_manager.display_keybindings()
+    
+    @handle_errors("Set keybinding", show_user=True)
+    def set_keybinding(self, action: str, key: str) -> bool:
+        """Set a specific keybinding."""
+        if self.keybindings_manager.set_keybinding(action, key):
+            self.console.print(f"[green]Keybinding set: {action} -> {key}[/green]")
+            return True
+        else:
+            self.console.print(f"[red]Failed to set keybinding[/red]")
+            return False
+    
+    @handle_errors("Reset keybindings", show_user=True)
+    def reset_keybindings(self) -> bool:
+        """Reset keybindings to default."""
+        if self.keybindings_manager.reset_keybindings():
+            self.console.print("[green]Keybindings reset to default[/green]")
+            return True
+        else:
+            self.console.print("[red]Failed to reset keybindings[/red]")
+            return False
+    
     def main(self) -> None:
         """Main entry point for customization tools."""
         tools = [
@@ -193,6 +220,21 @@ class CustomizationTools:
                 'name': 'Reset Menu',
                 'description': 'Reset menu to default',
                 'function': self.run_reset_menu
+            },
+            {
+                'name': 'Show Keybindings',
+                'description': 'Display current keybindings',
+                'function': self.run_show_keybindings
+            },
+            {
+                'name': 'Set Keybinding',
+                'description': 'Set custom keybinding',
+                'function': self.run_set_keybinding
+            },
+            {
+                'name': 'Reset Keybindings',
+                'description': 'Reset keybindings to default',
+                'function': self.run_reset_keybindings
             }
         ]
         
@@ -279,6 +321,27 @@ class CustomizationTools:
         confirm = input("Reset menu to default? (yes/no): ").strip().lower()
         if confirm == 'yes':
             self.reset_menu()
+    
+    def run_show_keybindings(self) -> None:
+        """Run show keybindings."""
+        self.console.print("\n[bold cyan]Current Keybindings[/bold cyan]")
+        self.show_keybindings()
+    
+    def run_set_keybinding(self) -> None:
+        """Run set keybinding."""
+        self.console.print("\n[bold cyan]Set Keybinding[/bold cyan]")
+        self.show_keybindings()
+        action = input("Enter action (quit/back/refresh/help/menu/search/clear): ").strip()
+        key = input("Enter key: ").strip()
+        if action and key:
+            self.set_keybinding(action, key)
+    
+    def run_reset_keybindings(self) -> None:
+        """Run reset keybindings."""
+        self.console.print("\n[bold cyan]Reset Keybindings[/bold cyan]")
+        confirm = input("Reset keybindings to default? (yes/no): ").strip().lower()
+        if confirm == 'yes':
+            self.reset_keybindings()
 
 
 def main():
