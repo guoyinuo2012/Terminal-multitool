@@ -63,19 +63,15 @@ class Dashboard:
         """Display the main menu dashboard."""
         self.console.clear()
         
-        # Apply theme colors
-        header_color = self.theme_manager.get_theme_color('header')
-        subtitle_color = self.theme_manager.get_theme_color('subtitle')
+        # Simple header (using static colors for now to avoid theme errors)
+        self.console.print("[bold cyan]VOID - Terminal-Based Multitool[/bold cyan]")
+        self.console.print("[bold green]Created by Yinuo[/bold green]\n")
         
-        # Simple header with theme
-        self.console.print(f"[bold {header_color}]VOID - Terminal-Based Multitool[/bold {header_color}]")
-        self.console.print(f"[bold {subtitle_color}]Created by Yinuo[/bold {subtitle_color}]\n")
-        
-        # Simple table with theme colors
+        # Simple table
         table = Table(show_header=False)
-        table.add_column("Opt", style=self.theme_manager.get_theme_color('table_col_1'), width=4)
-        table.add_column("Tool", style=self.theme_manager.get_theme_color('table_col_2'), width=15)
-        table.add_column("Description", style=self.theme_manager.get_theme_color('table_col_3'))
+        table.add_column("Opt", style="cyan", width=4)
+        table.add_column("Tool", style="green", width=15)
+        table.add_column("Description", style="white")
         
         # Display only non-hidden categories
         for key, cat in self.categories.items():
@@ -83,8 +79,8 @@ class Dashboard:
                 table.add_row(key, cat['name'], cat['desc'])
         
         self.console.print(table)
-        self.console.print(f"\n[{self.theme_manager.get_theme_color('highlight')}DISCLAIMER: Education & authorized research only[/{self.theme_manager.get_theme_color('highlight')}]")
-        self.console.print(f"[bold {self.theme_manager.get_theme_color('header')}Choice:[/bold {self.theme_manager.get_theme_color('header')}] ", end="")
+        self.console.print("\n[yellow]DISCLAIMER: Education & authorized research only[/yellow]")
+        self.console.print("[bold cyan]Choice:[/bold cyan] ", end="")
     
     def get_user_choice(self) -> str:
         """

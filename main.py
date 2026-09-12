@@ -39,8 +39,16 @@ def main():
         print("\nDISCLAIMER: This tool is for education and authorized")
         print("research only. Use only on systems you own or have")
         print("explicit permission to test.")
-        print("\nPress Enter to continue...")
-        input()
+        
+        # Auto-continue for non-interactive environments
+        try:
+            print("\nPress Enter to continue...")
+            input()
+        except EOFError:
+            # Non-interactive mode, continue automatically
+            print("(Auto-continuing...)")
+        except:
+            print("(Continuing...)")
         
         # Launch the dashboard
         dashboard = Dashboard(config)
