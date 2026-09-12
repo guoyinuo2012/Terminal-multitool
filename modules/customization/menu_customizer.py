@@ -37,6 +37,10 @@ class MenuCustomizer:
             '6': {'name': 'Utils', 'desc': 'General utilities', 'module': 'modules.utils'},
             '7': {'name': 'Discord', 'desc': 'Discord tools', 'module': 'modules.discord'},
             '8': {'name': 'Resources', 'desc': 'OSINT resources', 'module': 'modules.resources'},
+            '9': {'name': 'Files', 'desc': 'File management tools', 'module': 'modules.filetools'},
+            '10': {'name': 'Text', 'desc': 'Text processing tools', 'module': 'modules.texttools'},
+            '11': {'name': 'System', 'desc': 'System monitoring tools', 'module': 'modules.systemtools'},
+            '12': {'name': 'Customize', 'desc': 'Themes, menu, settings', 'module': 'modules.customization'},
             '0': {'name': 'Exit', 'desc': 'Exit application', 'module': None}
         }
     

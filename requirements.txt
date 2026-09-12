@@ -31,3 +31,6 @@ python-dotenv>=1.0.0
 
 # Logging
 colorlog>=6.8.0
+
+# System Monitoring
+psutil>=5.9.0

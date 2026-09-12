@@ -34,14 +34,6 @@ class Dashboard:
         
         # Load custom menu or use default
         self.categories = self.menu_customizer.get_custom_menu()
-        
-        # Add customization option if not present
-        if '9' not in self.categories:
-            self.categories['9'] = {
-                'name': 'Customize',
-                'desc': 'Themes, menu, settings',
-                'module': 'modules.customization'
-            }
     
     def run(self) -> None:
         """Run the main dashboard loop."""
