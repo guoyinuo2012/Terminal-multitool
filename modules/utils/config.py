@@ -95,6 +95,19 @@ class ConfigManager:
             'osint': {
                 'cache_enabled': True,
                 'cache_duration': 3600
+            },
+            'generators': {
+                'default_password_length': 20,
+                'default_uuid_version': 4
+            },
+            'crypto': {
+                'default_hash_algorithm': 'sha256',
+                'default_token_length': 32
+            },
+            'customization': {
+                'enable_themes': True,
+                'enable_menu_customization': True,
+                'save_preferences': True
             }
         }
         
