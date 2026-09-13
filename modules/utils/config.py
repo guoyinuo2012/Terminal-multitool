@@ -1,5 +1,5 @@
 """
-Configuration management for Void application
+Configuration management for Terminal Multi Tool application
 """
 
 import json
@@ -73,7 +73,7 @@ class ConfigManager:
         """
         default_config = {
             'app': {
-                'name': 'Void',
+                'name': 'Terminal Multi Tool',
                 'version': '1.0.0',
                 'debug': False,
                 'log_level': 'INFO'
@@ -86,7 +86,7 @@ class ConfigManager:
             'network': {
                 'timeout': 30,
                 'max_retries': 3,
-                'user_agent': 'Void/1.0'
+                'user_agent': 'TerminalMultiTool/1.0'
             },
             'discord': {
                 'enabled': False,

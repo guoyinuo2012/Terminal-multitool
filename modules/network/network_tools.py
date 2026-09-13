@@ -52,7 +52,7 @@ class NetworkTools:
         try:
             # Try ipinfo.io first
             url = self.apis['ipinfo'].format(ip)
-            headers = {'User-Agent': 'Void/1.0'}
+            headers = {'User-Agent': 'TerminalMultiTool/1.0'}
             
             response = requests.get(url, headers=headers, timeout=30)
             
@@ -128,7 +128,7 @@ class NetworkTools:
                 
                 # Fallback to API
                 url = self.apis['whois'].format(ip)
-                headers = {'User-Agent': 'Void/1.0'}
+                headers = {'User-Agent': 'TerminalMultiTool/1.0'}
                 
                 response = requests.get(url, headers=headers, timeout=30)
                 

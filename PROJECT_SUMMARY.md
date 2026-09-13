@@ -1,8 +1,8 @@
-# Void Project Summary
+# Terminal Multi Tool Project Summary
 
 ## Project Overview
 
-Void is a comprehensive terminal-based multitool application inspired by Void-Tools, providing a Rich TUI (Terminal User Interface) dashboard for OSINT research, network diagnostics, Discord helpers, generators, and CLI tools.
+Terminal Multi Tool is a comprehensive terminal-based multitool application providing a Rich TUI (Terminal User Interface) dashboard for OSINT research, network diagnostics, Discord helpers, generators, and CLI tools.
 
 **Created by Yinuo**
 
@@ -142,7 +142,7 @@ Void is a comprehensive terminal-based multitool application inspired by Void-To
 ## Project Structure
 
 ```
-Void/
+Terminal Multi Tool/
 ├── main.py                    # Application entry point
 ├── setup.bat                  # Installation script
 ├── start.bat                  # Application launcher
@@ -280,7 +280,7 @@ python main.py
 
 ## Conclusion
 
-The Void project is a complete, production-ready terminal-based multitool application with:
+The Terminal Multi Tool project is a complete, production-ready terminal-based multitool application with:
 
 - ✅ 9 comprehensive tool categories
 - ✅ 40+ individual tools

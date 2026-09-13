@@ -1,4 +1,4 @@
-# Void - Quick Start Guide
+# Terminal Multi Tool - Quick Start Guide
 
 ## Installation (Windows)
 
@@ -12,7 +12,7 @@
 
 ## First Run
 
-When you first launch Void:
+When you first launch Terminal Multi Tool:
 
 1. You'll see the main dashboard with 7 tool categories
 2. Each category is numbered (1-7) for easy selection
@@ -92,7 +92,7 @@ Edit `config/config.yaml` to customize:
 ## Project Structure
 
 ```
-Void/
+Terminal Multi Tool/
 ├── main.py              # Launch this to run
 ├── setup.bat            # Run this first
 ├── start.bat            # Run this to start

@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo VOID - Starting Application
+echo Terminal Multi Tool - Starting Application
 echo Created by Yinuo
 echo ========================================
 echo.
@@ -20,7 +20,7 @@ REM Activate virtual environment
 call venv\Scripts\activate.bat
 
 REM Run the application
-echo [*] Starting Void dashboard...
+echo [*] Starting Terminal Multi Tool dashboard...
 python main.py
 
 REM Keep window open if there's an error

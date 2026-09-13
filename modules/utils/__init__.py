@@ -1,5 +1,5 @@
 """
-Utility modules for Void application
+Utility modules for Terminal Multi Tool application
 """
 
 from .logger import setup_logger

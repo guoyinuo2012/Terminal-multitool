@@ -43,7 +43,3 @@ config/api_keys.yaml
 # OS
 .DS_Store
 Thumbs.db
-
-# Void specific
-Void/logs/
-Void/config/api_keys.yaml

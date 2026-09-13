@@ -178,7 +178,7 @@ class AdvancedOSINTTools:
         try:
             # Have I Been Pwned API (requires API key for full functionality)
             url = f"https://haveibeenpwned.com/api/v3/breachedaccount/{email}"
-            headers = {'User-Agent': 'Void/1.0'}
+            headers = {'User-Agent': 'TerminalMultiTool/1.0'}
             
             response = requests.get(url, headers=headers, timeout=10)
             

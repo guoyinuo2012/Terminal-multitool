@@ -1,5 +1,5 @@
 """
-Main Rich TUI Dashboard for Void application
+Main Rich TUI Dashboard for Terminal Multi Tool application
 Created by Yinuo
 """
 
@@ -44,7 +44,8 @@ class Dashboard:
                 self.handle_choice(choice)
         except KeyboardInterrupt:
             self.logger.info("Dashboard interrupted by user")
-            print("\n[!] Goodbye!")
+            print("\n[!] Thank you for using Terminal Multi Tool!")
+            print("Created by Yinuo")
             sys.exit(0)
         except Exception as e:
             self.error_handler.handle_exception(e, "Dashboard")

@@ -1,5 +1,5 @@
 """
-Menu Customizer for Void Application
+Menu Customizer for Terminal Multi Tool Application
 Created by Yinuo
 """
 

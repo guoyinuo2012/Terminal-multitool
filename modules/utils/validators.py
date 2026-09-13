@@ -1,5 +1,5 @@
 """
-Input validation utilities for Void application
+Input validation utilities for Terminal Multi Tool application
 """
 
 import re

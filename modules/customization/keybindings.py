@@ -1,5 +1,5 @@
 """
-Keybindings Manager for Void Application
+Keybindings Manager for Terminal Multi Tool Application
 Created by Yinuo
 """
 

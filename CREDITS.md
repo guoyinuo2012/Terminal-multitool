@@ -1,6 +1,6 @@
 # Credits
 
-## Void - Terminal-Based Multitool Application
+## Terminal Multi Tool - Terminal-Based Multitool Application
 
 **Created by Yinuo**
 
@@ -8,7 +8,7 @@ This comprehensive terminal-based multitool application was designed, developed,
 
 ### Project Creator
 - **Developer:** Yinuo
-- **Project:** Void - Terminal-Based Multitool Application
+- **Project:** Terminal Multi Tool - Terminal-Based Multitool Application
 - **Version:** 1.0.0
 - **Completion Date:** 2026-09-10
 
@@ -94,7 +94,7 @@ Yinuo created easy installation processes:
 
 ### Vision
 
-Yinuo created Void as a comprehensive tool for:
+Yinuo created Terminal Multi Tool as a comprehensive tool for:
 - Educational purposes and learning
 - Authorized security research
 - System administration tasks

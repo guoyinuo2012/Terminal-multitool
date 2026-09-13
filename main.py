@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Void - Comprehensive Terminal-Based Multitool Application
+Terminal Multi Tool - Comprehensive Terminal-Based Multitool Application
 Main Entry Point
 
 DISCLAIMER: This tool is for education and authorized research only.
@@ -25,7 +25,7 @@ def main():
     try:
         # Setup logging
         logger = setup_logger()
-        logger.info("Starting Void application")
+        logger.info("Starting Terminal Multi Tool application")
         
         # Load configuration
         config_manager = ConfigManager()
@@ -33,7 +33,7 @@ def main():
         
         # Display disclaimer
         print("\n" + "="*60)
-        print("VOID - Terminal-Based Multitool Application")
+        print("Terminal Multi Tool - Terminal-Based Multitool Application")
         print("Created by Yinuo")
         print("="*60)
         print("\nDISCLAIMER: This tool is for education and authorized")

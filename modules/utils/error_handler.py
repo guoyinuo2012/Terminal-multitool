@@ -1,5 +1,5 @@
 """
-Error handling utilities for Void application
+Error handling utilities for Terminal Multi Tool application
 """
 
 import sys

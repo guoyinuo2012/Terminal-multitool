@@ -1,6 +1,6 @@
-# Void - Terminal-Based Multitool Application
+# Terminal Multi Tool - Terminal-Based Multitool Application
 
-A comprehensive terminal-based multitool application inspired by Void-Tools, providing a Rich TUI (Terminal User Interface) dashboard organizing various utilities for OSINT research, network diagnostics, Discord helpers, generators, and CLI tools.
+A comprehensive terminal-based multitool application providing a Rich TUI (Terminal User Interface) dashboard organizing various utilities for OSINT research, network diagnostics, Discord helpers, generators, and CLI tools.
 
 **Created by Yinuo**
 

@@ -1,5 +1,5 @@
 """
-Configuration Editor for Void Application
+Configuration Editor for Terminal Multi Tool Application
 Created by Yinuo
 """
 

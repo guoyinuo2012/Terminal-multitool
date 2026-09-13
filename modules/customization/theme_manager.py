@@ -1,5 +1,5 @@
 """
-Theme Manager for Void Application
+Theme Manager for Terminal Multi Tool Application
 Created by Yinuo
 """
 

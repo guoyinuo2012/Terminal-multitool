@@ -54,7 +54,7 @@ class OSINTTools:
         
         try:
             url = self.apis['emailrep'].format(email)
-            headers = {'User-Agent': 'Void/1.0'}
+            headers = {'User-Agent': 'TerminalMultiTool/1.0'}
             
             response = requests.get(url, headers=headers, timeout=30)
             
@@ -102,7 +102,7 @@ class OSINTTools:
         
         try:
             url = self.apis['github'].format(username)
-            headers = {'User-Agent': 'Void/1.0'}
+            headers = {'User-Agent': 'TerminalMultiTool/1.0'}
             
             response = requests.get(url, headers=headers, timeout=30)
             

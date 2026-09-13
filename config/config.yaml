@@ -1,8 +1,8 @@
-# Void Application Configuration
+# Terminal Multi Tool Application Configuration
 # Created by Yinuo
 
 app:
-  name: Void
+  name: Terminal Multi Tool
   version: 1.0.0
   author: Yinuo
   debug: false
@@ -18,7 +18,7 @@ ui:
 network:
   timeout: 30
   max_retries: 3
-  user_agent: Void/1.0
+  user_agent: TerminalMultiTool/1.0
 
 discord:
   enabled: false

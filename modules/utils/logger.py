@@ -1,5 +1,5 @@
 """
-Logging configuration for Void application
+Logging configuration for Terminal Multi Tool application
 """
 
 import logging
