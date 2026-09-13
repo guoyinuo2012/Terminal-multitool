@@ -57,7 +57,7 @@ class Dashboard:
         self.console.clear()
         
         # Simple header (using static colors for now to avoid theme errors)
-        self.console.print("[bold cyan]VOID - Terminal-Based Multitool[/bold cyan]")
+        self.console.print("[bold cyan]Terminal Multi Tool - Terminal-Based Multitool[/bold cyan]")
         self.console.print("[bold green]Created by Yinuo[/bold green]\n")
         
         # Simple table
@@ -102,7 +102,7 @@ class Dashboard:
         """
         if choice == '0':
             self.running = False
-            self.console.print("\n[bold green]Thank you for using Void![/bold green]")
+            self.console.print("\n[bold green]Thank you for using Terminal Multi Tool![/bold green]")
             self.console.print("[bold cyan]Created by Yinuo[/bold cyan]")
             return
         
